@@ -227,10 +227,10 @@ function Menu(){
   }
     //escolhaInput = createInput('');
   
-    /*if (keyIsDown(49)){            Foram várias tentativas e erros
-      storeItem('escolhaInput', 1);  Parecia muito esforço pra algo trivial
-    }                                Mas no final foi divertido e valeu a pena
-    if (keyIsDown(50)){              **Obrigado ALURA, por me trazer de volta ao força   
+    /*if (keyIsDown(49)){            
+      storeItem('escolhaInput', 1);  
+    }                                
+    if (keyIsDown(50)){                  
       storeItem('escolhaInput', 2);
     }*/
   //storeItem('escolhaInput',createInput(''));
