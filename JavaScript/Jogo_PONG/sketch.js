@@ -30,6 +30,10 @@ let sonRaquete;
 let ponto;
 let trilha;
 
+//Menu do Jogo
+let tela = 1; // tela de menu
+let escolha = 0;
+
 
 function preload(){
   trilha = loadSound("trilha.mp3");
@@ -39,23 +43,32 @@ function preload(){
 
 function setup() {
   createCanvas(600, 400);
-  //trilha.loop();
   
+  
+  
+  /*textSize(25);
+  text("1-Jogador vs CPU", 300, 200);
+  text("2-Jogador vs Jogador", 280, 180);
+  escolhaInput = createInput(' ');
+  escolhaInput.position(260, 160);*/
+  
+  
+  //trilha.loop();
+    clear();
 }
 
-function draw() {
+function draw(){
   background(0);
-  mostraBolinha();
-  movimentaBolinha();
-  verificaColisaoBorda();
-  mostraRaquete(xRaquete, yRaquete);
-  movimentaMinhaRaquete();
-  verificaColisaoRaquete(xRaquete, yRaquete);
-  mostraRaquete(xRaqueteOponente, yRaqueteOponente);
-  movimentaRaqueteOponente();
-  verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente);
-  incluiPlacar();
-  marcandoPlacar();
+  Menu();
+  
+  if(escolha == '1'){
+    clear();
+    JogoVsCPU();
+  }
+  if(escolha == '2'){
+    clear();
+    JogoVsJogo();
+  }
 }
 
 function mostraBolinha(){
@@ -85,7 +98,6 @@ function mostraRaquete(x, y){
       raqueteAltura);
 }
 
-
 function movimentaMinhaRaquete(){
   if (keyIsDown(UP_ARROW)){
     yRaquete -= 10;
@@ -94,7 +106,6 @@ function movimentaMinhaRaquete(){
     yRaquete += 10;
   }
 }
-
 
 /*function verificaColisaoRaquete(){
   if (xBolinha - raio < xRaquete + raqueteComprimento && 
@@ -110,6 +121,15 @@ function verificaColisaoRaquete(x, y) {
         velocidadeXBolinha *= -1;
       raquete.play();
     }
+}
+
+function movimentaRaquenteJogador2(){
+   if (keyIsDown(87)){
+    yRaqueteOponente -= 10;
+  }
+  if (keyIsDown(83)){
+    yRaqueteOponente += 10;
+  }
 }
 
 function movimentaRaqueteOponente() {
@@ -161,4 +181,78 @@ function bolinhaNaoFicaPresa(){
     if (XBolinha - raio < 0){
     XBolinha = 23
     }
+}
+
+/*function Escolha(){
+  if(escolhaInput === '1'){
+    movimentaRaqueteOponente();
+  }
+  if(escolhaInput === '2'){
+    movimentaRaquenteJogador2();
+  }
+}*/
+
+function JogoVsCPU(){
+  //trilha.loop();
+  mostraBolinha();
+  movimentaBolinha();
+  verificaColisaoBorda();
+  mostraRaquete(xRaquete, yRaquete);
+  movimentaMinhaRaquete();
+  verificaColisaoRaquete(xRaquete, yRaquete);
+  mostraRaquete(xRaqueteOponente, yRaqueteOponente);
+  movimentaRaqueteOponente();
+  verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente);
+  incluiPlacar();
+  marcandoPlacar();
+}
+
+function Menu(){
+  background(0);
+  
+  textAlign(RIGHT);
+  rect(145, 160, 230, 80, 15);
+  textStyle(BOLD);
+  text("1-Jogador vs CPU", 295, 190);
+  text("2-Jogador vs Jogador", 320, 215);
+  if(keyIsDown(UP_ARROW)){
+    rect(170, 175, 155, 20, 15);
+    text("1-Jogador vs CPU", 295, 190);
+    escolha = 1;
+  }
+  if(keyIsDown(DOWN_ARROW)){
+    rect(170, 200, 155, 20, 15);
+    text("2-Jogador vs Jogador", 320, 215);
+    escolha = 2;
+  }
+    //escolhaInput = createInput('');
+  
+    /*if (keyIsDown(49)){            Foram várias tentativas e erros
+      storeItem('escolhaInput', 1);  Parecia muito esforço pra algo trivial
+    }                                Mas no final foi divertido e valeu a pena
+    if (keyIsDown(50)){              **Obrigado ALURA, por me trazer de volta ao força   
+      storeItem('escolhaInput', 2);
+    }*/
+  //storeItem('escolhaInput',createInput(''));
+  //escolhaInput.position(150,210);
+  //escolhaInput.input(myInputEvent);
+}
+
+function myInputEvent() {
+  console.log('you are typing: ', this.value());
+}
+
+function JogoVsJogo(){
+  //trilha.loop();
+  mostraBolinha();
+  movimentaBolinha();
+  verificaColisaoBorda();
+  mostraRaquete(xRaquete, yRaquete);
+  movimentaMinhaRaquete();
+  verificaColisaoRaquete(xRaquete, yRaquete);
+  mostraRaquete(xRaqueteOponente, yRaqueteOponente);
+  movimentaRaquenteJogador2();
+  verificaColisaoRaquete(xRaqueteOponente, yRaqueteOponente);
+  incluiPlacar();
+  marcandoPlacar();
 }
