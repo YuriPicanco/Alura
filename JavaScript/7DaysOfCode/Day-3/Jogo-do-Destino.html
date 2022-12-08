@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let escolha = prompt('Você prefere aprender (1)Back-End ou (2)Front-End');
+        let msg;
+        
+
+        if(escolha == 1){
+            msg = `Que legal, Back-End!! E...`;
+            alert(msg);
+            escolha = prompt(`Você prefere aprender (1)C# ou (2)Java`);
+            if(escolha == 1){
+                msg = 'C# é uma ótima escolha';
+                alert(msg);
+            }
+            if(escolha == 2 ){
+                msg = 'Java é uma ótima escolha';
+                alert(msg);
+            }
+        }
+        if(escolha == 2){
+            msg = 'Que legal, Front-End!! E...';
+            alert(msg);
+            escolha = prompt('Você prefere (1)React ou (2)Vue');
+            if(escolha == 1){
+                msg = 'React é uma ótima escolha!';
+                alert(msg);
+            }
+            if(escolha == 2){
+                msg = 'Vue é uma ótima escolha!';
+                alert(msg);
+            }
+        }
+
+        do{
+            escolha = prompt("Quais técnologias você gostaria de aprender?");
+            msg = `${escolha} é uma ótima escolha!`;
+            alert(msg);
+            escolha = prompt('Tem mais alguma técnologia que você gostaria de aprender?\n(Digite ok para continuar)');
+        }while(escolha.toUpperCase() == 'OK');
+        msg = 'ATÉ MAIS!!!';
+        alert(msg);
+    </script>
+</body>
+</html>
