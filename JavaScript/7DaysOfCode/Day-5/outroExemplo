@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTA DE COMPRAS</title>
+    
+</head>
+<body>
+
+    <h1>#7DaysOfCode Day 5</h1></br>
+
+    <h1>LISTA DE COMPRAS</h1>
+    
+    <h2>Escolha a categoria</h2>
+        <select id="categoria">
+            <option>Açougue</option>
+            <option>Bebidas</option>
+            <option>Bomboniere</option>
+            <option>Congelados</option>
+            <option>Frutas e Verduras</option>
+            <option>Grãos e Farinhas</option>
+            <option>Higiene Pessoal</option>
+            <option>Laticínios</option>
+            <option>Limpeza</option>
+            <option>Pet</option>
+        </select>
+    </br></br>
+    
+    <h2> Digite o nome do ítem da lista</h2>
+    <input type="text" id="item"></br></br>
+    
+    <button id="adicionar">Adicionar mais um item</button></br></br>
+    <button id="finalizar">Finalizar lista</button></br></br></br></br>
+    
+    <script>
+    
+        function mostra(frase) {
+            document.write(frase);	
+        }
+            
+        var categoria = document.getElementById("categoria");
+        var item = document.getElementById("item");
+        var button = document.getElementById("adicionar");
+        var finalizar = document.getElementById("finalizar");
+        item.focus();
+    
+        var acougue = [];
+        var bebidas = [];
+        var bomboniere = [];
+        var congelados = [];
+        var frutasVerduras = [];
+        var graosFarinhas = [];
+        var higienePessoal = [];
+        var laticinios = [];
+        var limpeza = [];
+        var pet = [];
+    
+        function adicionarLista() {
+            
+            if(categoria.value == "Açougue") {
+                acougue.push(item.value);
+            }
+    
+            if(categoria.value == "Bebidas") {
+                bebidas.push(item.value);
+            }
+    
+            if(categoria.value == "Bomboniere") {
+                bomboniere.push(item.value);
+            }
+    
+            if(categoria.value == "Congelados") {
+                congelados.push(item.value);
+            }
+    
+            if(categoria.value == "Frutas e Verduras") {
+                frutasVerduras.push(item.value);
+            }
+    
+            if(categoria.value == "Grãos e Farinhas") {
+                graosFarinhas.push(item.value);
+            }
+    
+            if(categoria.value == "Higiene Pessoal") {
+                higienePessoal.push(item.value);
+            }
+    
+            if(categoria.value == "Laticínios") {
+                laticinios.push(item.value);
+            }
+    
+            if(categoria.value == "Limpeza") {
+                limpeza.push(item.value);
+            }
+    
+            if(categoria.value == "Pet") {
+                pet.push(item.value);
+            }
+            
+            item.value = "";
+            item.focus();
+        }
+    
+        function finalizarLista() {
+            adicionarLista();
+            mostra("<h2>Essa é sua lista: </h2>" + 
+                    "</br> Açougue: "+ acougue.join(", ") +
+                    "</br> Bebidas: "+ bebidas.join(", ") +
+                    "</br> Bomboniere: "+ bomboniere.join(", ") +
+                    "</br> Congelados: "+ congelados.join(", ") +
+                    "</br> Frutas e Verduras: "+ frutasVerduras.join(", ") +
+                    "</br> Grãos e Farinhas: "+ graosFarinhas.join(", ") +
+                    "</br> Higiene Pessoal: "+ higienePessoal.join(", ") +
+                    "</br> Laticínios: "+ laticinios.join(", ") +
+                    "</br> Limpeza: "+ limpeza.join(", ") +
+                    "</br> Pet: "+ pet.join(", "))
+        }
+    
+        button.onclick = adicionarLista;
+        finalizar.onclick = finalizarLista;
+    
+    </script>
+    
+</body>
+</html>
