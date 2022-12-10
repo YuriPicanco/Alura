@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let escolha = true;
+        let comida, categoria;
+        let lista = {
+        frutas: ['FRUTAS: '],
+        lactios: ['LACTIOS: '],
+        congelados: ['CONGELADOS: '],
+        doces: ['DOCES: ']
+        };
+
+        do{
+            escolha = prompt("Deseja adicionar um novo elemento a sua lista?");
+
+            if(escolha.toUpperCase()=== 'SIM'){
+                escolha = true;
+                comida = prompt("O que devo acrescentar?");
+                escolha = prompt("Qual categoria do elemento?");
+
+                if(escolha.toUpperCase() === 'FRUTAS'){
+                    lista.frutas.push(comida);
+                }else if(escolha.toUpperCase() === 'LACTIOS'){
+                    lista.lactios.push(comida);
+                }else if(escolha.toUpperCase() === 'CONGELADOS'){
+                    lista.congelados.push(comida);
+                }else if(escolha.toUpperCase() === 'DOCES'){
+                    lista.doces.push(comida);
+                }
+            }else if(escolha.toUpperCase() === 'NAO' || escolha.toUpperCase() === 'NÃO'){
+                escolha = false;
+                break;
+            }
+        }while(escolha);
+
+         alert(lista.frutas.join([separador = ',']));
+         alert(lista.lactios.join([separador = ',']));
+         alert(lista.congelados.join([separador = ',']));
+         alert(lista.doces.join([separador = ',']));
+
+    </script>
+</body>
+</html>
