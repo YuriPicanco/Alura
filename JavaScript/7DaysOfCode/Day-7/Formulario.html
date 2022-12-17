@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //const prompt = require('prompt-sync')({sigint: true});
+
+            let num1, num2;
+            num1 = prompt("Entre com um valor: ");
+            num2 = prompt("Entre outro valor: ");
+            let resultado;
+
+            
+
+
+            function soma(){
+                return num1 + num2;
+            }
+
+            function subtracao(a, b){
+                return (a - b);
+            }
+
+            function divisao(a, b){
+                return (a / b);
+            }
+
+            function multiplicacao(a, b){
+                return (a * b);
+            }
+
+            escolha = prompt('Soma (+), Subtração (-), Divisao (/) ou Multiplicacao(*)');
+            
+            switch(escolha){
+                case 'soma':
+                    alert(`${soma(num1, num2)}`);
+                    break;
+                case 'subtracao':
+                    alert(`${subtracao(num1, num2)}`);
+                case divisao:
+                    alert(`${divisao(num1, num2)}`);
+                    break;
+                case 'multiplicacao':
+                    alert(`${multiplicacao(num1, num2)}`);
+                    break;
+            }
+            
+            /*
+            if(escolha == 'soma') {
+                alert(soma(num1, num2));
+            }
+
+            if(escolha === 'subtracao'){
+                resultado = subtracao(num1,num2);
+            }
+
+            if(escolha === 'divisao'){
+                resultado = divisa(num1,num2);
+            }
+
+            if(escolha === 'multiplicacao'){
+                resultado = multiplicacao(num1,num2);
+
+            }*/
+    </script>
+</body>
+</html>

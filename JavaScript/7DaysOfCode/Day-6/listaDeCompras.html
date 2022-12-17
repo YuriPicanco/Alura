@@ -11,6 +11,7 @@
 
         let escolha = true;
         let comida, categoria;
+        
         let lista = {
         frutas: ['FRUTAS: '],
         lactios: ['LACTIOS: '],
@@ -19,9 +20,11 @@
         };
 
         do{
+
             escolha = prompt("Deseja adicionar um novo elemento a sua lista?");
 
             if(escolha.toUpperCase()=== 'SIM'){ // toUpperCase transforma a string toda em maiusculo
+
                 escolha = true;
                 comida = prompt("O que devo acrescentar?");
                 escolha = prompt("Qual categoria do elemento?");
@@ -35,17 +38,46 @@
                 }else if(escolha.toUpperCase() === 'DOCES'){
                     lista.doces.push(comida);
                 }
+
             }else if(escolha.toUpperCase() === 'NAO' || escolha.toUpperCase() === 'NÃO'){
+
+                escolha = prompt("Deseja excluir um elemento da lista?");
+
+                if(escolha.toUpperCase() === 'SIM'){
+                    comida = prompt(`Qual elemento deseja excluir?\n${lista.frutas}\n${lista.lactios}\n${lista.congelados}\n${lista.doces}`);
+
+                    if(lista.frutas.indexOf(comida) != -1){
+                        lista.frutas.splice(lista.frutas.indexOf(comida), 1);
+                        alert(`O item ${comida} foi removido com sucesso!`)
+
+                    } else if(lista.lactios.indexOf(comida) != -1){
+                        lista.lactios.splice(latctios.indexOf(comida), 1);
+                        alert(`O item ${comida} foi removido com sucesso!`)
+
+                    } else if (lista.doces.indexOf(comida) != -1){
+                        lista.doces.splice(lista.doces.indexOf(comida), 1);
+                        alert(`O item ${comida} foi removido com sucesso!`)
+
+                    } else if (lista.ongelados.indexOf(comida) != -1){
+                        lista.congelados.splice(lista.congelados.indexOf(comida), 1);
+                        alert(`O item ${comida} foi removido com sucesso!`)
+
+                    } else {
+                    alert(`Não foi possível encontrar o item dentro da lista!`)
+                    }
+            }
+        }
+
+            escolha = prompt("Deseja imprimir a lista?")
+            if(escolha.toUpperCase()=== 'SIM'){
                 escolha = false;
                 break;
             }
+
         }while(escolha); //se a escolha for 'false' sai do while
         
         //imprime todas as listas //join  inprime todos os itens de uma lista
          alert(lista.frutas.join(','));
-         alert(lista.lactios.join(','));
-         alert(lista.congelados.join(','));
-         alert(lista.doces.join(','));
 
     </script>
 </body>
