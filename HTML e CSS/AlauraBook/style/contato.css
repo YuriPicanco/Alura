@@ -1,0 +1,120 @@
+.contatos{
+    background-color: var(--branco);
+    padding: 2em;
+}
+
+.contato__titulo, .contato__texto{
+    background: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.contato__titulo{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contato__texto{
+    margin: 1em 0;
+    font-weight: 300;
+}
+
+.contato__email{
+    background-color: transparent;
+    border: 1px solid var(--azul);
+    color: var(--azul);
+    border-radius: 24px;
+    padding: 1em;
+    width: 90%;
+}
+
+.contato__email::placeholder{
+    font-family: var(--fonte-principal);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    background: url(../images/icon/Vector-6.png) no-repeat;
+    background-position: 2em;
+}
+
+hr{
+    margin: 0;
+}
+.rodape__titulo{
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--branco);
+    padding: .5em;
+}
+
+.lista-rodape{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .contatos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contato__email{
+        width: 30%;
+    }
+
+    .contato__titulo{
+        font-size: 24px;
+    }
+
+    .contato__texto{
+        margin: 1em;
+    }
+
+    .rodape{
+        display: flex;
+        background-color: var(--branco);
+        justify-content: space-around;
+    }
+
+    .lista-rodape{
+        display: block;
+    }
+    
+    .lista-rodape__titulo{
+        color: var(--cinza);
+        font-weight: 400; 
+    }
+
+    .lista-rodape__item{
+        display: flex;
+        align-items: center;
+        margin: .6em 0;
+    }
+    
+    .lista-rodape__link{
+        color: var(--cinza);
+        font-weight: 500;
+        text-decoration: none;
+        margin-left: .6em;
+    }
+}
+
+@media screen and (min-width: 1720px){
+    .contatos {
+        padding: 3em 20vw;
+    }
+
+    .contato__email{
+        width: 50%;
+    }
+
+    .lista-rodape{
+        border-left: 1px solid var(--cinza);
+        padding-left: 1em;
+    }
+
+    .rodape{
+        padding: 3em 0;
+    }
+}

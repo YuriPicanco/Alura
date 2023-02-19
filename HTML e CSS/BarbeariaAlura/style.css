@@ -1,0 +1,400 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+}
+
+nav {
+	position: absolute;
+	top: 110px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+.produtos {
+	width: 940px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	vertical-align: top;
+	margin: 0 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 10px;
+}
+
+.produtos li:hover {
+	border-color: #C78C19;
+}
+
+.produtos li:active {
+	border-color: #088C19;	
+}
+
+.produtos li:hover h2 {
+	font-size: 34px;
+}
+
+.produtos h2 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.produto-descricao {
+	font-size: 18px;
+}
+
+.produto-preco {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+footer {
+	text-align: center;
+	background: url("bg.jpg");
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+form {
+	margin: 0 40px;
+}
+
+form label, form legend{
+	display: block;
+	font-size: 18px;
+	margin: 0 0 10px;
+}
+
+.input-padrao{
+	display:block;
+	margin:  0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+.checkbox {
+	margin: 10px 0px;
+}
+
+.enviar {
+	width: 40%;
+	padding:15px 0;
+	background: orange;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 10px;
+	transition: 1s all;
+}
+
+.enviar:hover {
+	background: darkorange;
+	transform: scale(1.2);
+	/*transform: rotate(360deg);*/
+
+}
+
+table{
+	margin: 20px 20px;
+}
+
+thead{
+	background: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+th, td{
+	border: 1px solid black;
+	padding: 8px 15px;
+}
+
+/*CSS DA PAGINA INICIAL */
+.banner{
+	width: 100%;
+}
+
+.titulo-principal{
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 1em;
+	clear: left;
+}
+
+.titulo-principal:first-letter{
+	font-weight: bold;
+}
+
+.titulo-principal:before{
+	content: "[";
+}
+
+.titulo-principal:after{
+	content: "]";
+}
+
+.principal{
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
+}
+
+.principal p{
+	margin: 0 0 1em;
+}
+
+.principal strong{
+	font-weight: bold;
+}
+
+.principal em{
+	font-style: italic;
+}
+
+.conteudo-beneficios{
+	width: 640px;
+	margin: 0 auto;
+}
+
+.lista-beneficios{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens{
+	line-height: 1.5;
+}
+
+.itens:first-child{
+	font-weight: bold;
+}
+
+.itens:before{
+	content: "✻"
+}
+.img-beneficios{
+	width: 50%;
+	box-shadow: 10px 10px 30px 20px #000000;
+}
+
+.img-beneficios:hover {
+	opacity: 70%;
+	transition: 200ms;
+}
+
+
+.utensilios{
+	width: 120px;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.video-conteudo{
+	width: 940px;
+	margin: 0 auto;
+
+}
+
+.mapa{
+	padding: 0 0 3em;
+	background: linear-gradient(#FEFEFEFE, #888888);
+}
+
+.mapa p{
+	margin: 3em 0;
+	text-align: center;
+}
+
+.beneficios{
+	padding: 3em 0;
+	background: #888888;
+	/*box-shadow: inset 0 0 30px #FF0000;
+	text-shadow: 2px 2px;*/
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+@media screen and (max-width: 480px){
+
+		.caixa, .principal, .conteudo-beneficios, .mapa-conteudo{
+			width: auto;
+			padding: 5px 0;
+		}
+
+		.navegacao{
+			
+			text-align: center;
+		}
+
+		h1{
+			text-align: center;
+		}
+
+		nav{
+			position: static;
+		}
+
+		.lista-beneficios, .img-beneficios{
+			width: 100%; 
+		}
+
+		.video-conteudo {
+			width: 57%;
+		}
+
+		/*Página Contato*/
+		main{
+			text-align: center;
+		}
+
+		header{
+			padding: 0 0 0 15px;
+			letter-spacing: -2px;
+		}
+
+		form, .enviar, .input-padrao{
+			transform: none;
+			font-size: 15px;
+			margin: 7px 40px;
+		}
+
+		textarea {
+			width: 240px;
+		}
+
+		table {
+			margin: 0 0 15px 45px;
+		}
+}
+
+/*   TESTES NOVIDADES APRIMORAMENTO
+main > p{  Seleciona todas as tags p filhas de main
+	background: red;
+}
+
+img + p{  Seleciona tag p após uma img 
+	background: blue;
+}
+
+img ~ p{  Seleciona todas as tags p após img 
+	background: yellow;
+}
+
+.principal p:not(#missao){
+	background: darkorange;
+}
+
+*/
+
+
+/* Página de contato 
+.contato {
+	width: 940px;
+	margin: 40px auto;
+}
+
+.contato label, .input-group legend {
+	display: block;
+	margin: 0 0 5px;
+	font-size: 20px;
+}
+
+.campo-padrao, textarea {
+	display: block;
+	margin: 0 0 30px;
+	padding: 10px 20px;
+	width: 50%;
+	border: 1px solid #aaa;
+}
+
+.input-group {
+	margin: 0 0 20px;
+}
+
+.newsletter {
+	margin: 0 0 20px;
+}
+
+.botao {
+	margin: 20px 0 0;
+	width: 30%;
+	padding: 10px 20px;
+	font-size: 24px;
+	display: inline-block;
+	background: orange;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+.botao:hover {
+	cursor: pointer;
+	transform: scale(1.2);	
+}
+
+.funcionamento {
+	width: 940px;
+	margin: 0 auto 40px;
+}
+
+table {
+	margin: 10px 0 0;
+}
+
+th  {
+	background: #777777;
+	color: #FFFFFF;
+}
+
+
+td, th {
+	border: 1px solid #000000;
+	padding: 5px 20px;
+}
+*/
