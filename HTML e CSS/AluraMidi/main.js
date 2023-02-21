@@ -1,12 +1,13 @@
-//Toca som pom
-function tocaSom(idElementoAudio){
-    const elemento = document.querySelector(idElementoAudio);
 
-    /*if(elemento && elemento.localName === 'audio'){
-        elemento.play();
-    }else{
-        console.log('Elemento não encontrado');
-    }*/
+
+//alert('ola mundo');
+
+//Toca som
+
+
+
+function tocaSom(idElementoAudio){ //Recebe o ID do audio
+    const elemento = document.querySelector(idElementoAudio); //Recebe o conteúdo do audio
 
     if(elemento.localName === 'audio'){
         elemento.play(); 
@@ -14,7 +15,7 @@ function tocaSom(idElementoAudio){
         console.log('Elemento não encontrado');
     }
 }
-const listaTeclas = document.querySelectorAll('.tecla');
+const listaTeclas = document.querySelectorAll('.tecla'); //Armazena os arquivos da classe 'tecla'
 
 for(let i = 0; i <listaTeclas.length;i++){
     const tecla = listaTeclas[i];
