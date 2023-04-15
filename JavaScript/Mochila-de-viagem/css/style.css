@@ -21,6 +21,9 @@ html {
     background: #C5965F;
     border-radius: 10px;
     gap: 2em;
+    max-width:40vw;
+    min-width: 40vw;
+
 }
   
 .mochila {
@@ -78,7 +81,7 @@ html {
 }
 
 .adicionar {
-    width: 100%;
+    max-width: 100%;
 }
 
 .adicionar input {
@@ -103,6 +106,7 @@ html {
 .lista {
     margin: 0;
     padding: 0;
+    max-width: 60vw;
 }
 
 .item {
