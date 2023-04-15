@@ -4,7 +4,6 @@ const lista = document.querySelector('#lista');//captura a classe lista tag ul
 const itens = JSON.parse(localStorage.getItem("itens")) || []; //ou recebe uma array vazia se não houver array
 
 form.addEventListener("submit", (evento)=> {
-
     evento.preventDefault();//previne o ocorrido padrão
 
     const nome = evento.target.elements['nome'];
@@ -15,13 +14,11 @@ form.addEventListener("submit", (evento)=> {
     };
     const existe = itens.find( (elemento) => elemento.nome === nome.value);
 
-    
     if(existe){
         itemAtual.id = existe.id;
-
         atualizaElemento(itemAtual);
-
         itens[itens.findIndex(elemento => elemento.id === existe.id)] = itemAtual;
+        
     } else {
         itemAtual.id = itens[itens.length - 1] ? (itens[itens.length - 1]+1) : 0;
 

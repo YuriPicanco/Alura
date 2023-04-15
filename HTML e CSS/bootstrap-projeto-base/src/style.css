@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.imagem-carrosel-um{
+    object-fit: cover;
+    object-position: 0 50%;;
+    height: 800px;
+}
+
+.imagem-carrosel-dois{
+    object-fit: cover;
+/*     object-position: 0 50%; */
+    height: 800px;
+}
+
+.carousel-caption h1{
+    font-family: 'Pacifico', 'cursive';
+}
